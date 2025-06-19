@@ -6,7 +6,7 @@ RegiBot is a tool designed to simulate basic actions in Pokemon GO using compute
 - [Demo video](https://youtu.be/vDXfKY8P7DU)
 
 
-- [Download APK](https://github.com/usuario/mi-aplicacion/releases/latest)
+- [Download APK](https://github.com/Juancavr6/RegiBot/releases)
 
 
 ---
