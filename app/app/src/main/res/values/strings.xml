@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name" translatable="false">RegiBot</string>
+
+    <string name="displayText_loading">Loading</string>
+    <string name="displayText_ready">All set! Press play</string>
+    <string name="displayText_priority">Priority order</string>
+    <string name="displayText_settings">Settings</string>
+    <string name="displayText_home">Home</string>
+    <string name="displayText_params">Parameters</string>
+    <string name="displayText_more">More</string>
+    <string name="displayText_theme">Theme</string>
+    <string name="displayText_permission">Permissions</string>
+    <string name="displayText_permission_desc">Check the status of the permissions</string>
+    <string name="displayText_language">Language</string>
+    <string name="displayText_version">Versions</string>
+    <string name="displayText_about">About this app</string>
+    <string name="displayText_version_desc">Check the latest versions</string>
+    <string name="displayText_selector_language">Select your language</string>
+    <string name="displayText_selector_theme">Select a theme</string>
+    <string name="displayText_selector_dark">Dark</string>
+    <string name="displayText_selector_light">Light</string>
+    <string name="displayText_overlap">Allow Display Over Other Apps</string>
+    <string name="displayText_overlap_desc">This permission is required to show floating elements while you\'re using other apps.The overlay is only visible when the feature is active and can be turned off at any time.</string>
+    <string name="displayText_accesibility">Enable Accessibility</string>
+    <string name="displayText_accesibility_desc">This feature requires accessibility permission to safely automate certain actions.The permission is only used while the feature is active.</string>
+    <string name="displayText_enable">Enable</string>
+    <string name="displayText_later">Maybe later</string>
+    <string name="displayText_threshold">Thresholds</string>
+    <string name="displayText_enter">Enter a Value</string>
+    <string name="displayText_invalid_input">Not a valid input</string>
+    <string name="displayText_reset_general">Reset general parameters</string>
+    <string name="displayText_reset_threshold">Reset thresholds</string>
+    <string name="displayText_reset">Reset</string>
+    <string name="displayText_kofi">Support me on Ko-fi</string>
+
+    <string name="actionElement_pokestop">Spin Pokestop</string>
+    <string name="actionElement_pokemon">Catch Pokemon</string>
+    <string name="actionElement_rocket">Spin Rocket stop</string>
+    <string name="actionElement_node">Collect nodes</string>
+
+    <string name="config_fast_catch">Fast catch</string>
+    <string name="config_throw_boost">Throw power boost</string>
+    <string name="config_fixed_pokeball">Use a preset Pokeball position</string>
+    <string name="config_save_coords">Detect and save position</string>
+    <string name="config_cycle_interval">Cycle interval (speed)</string>
+    <string name="config_wait_timeout">Wait timeout</string>
+    <string name="config_max_results">Results per inference</string>
+    <string name="config_boost_value">Throw power boost (%)</string>
+    <string name="config_threshold_classifier">Classification threshold</string>
+    <string name="config_threshold_detector">Detection threshold</string>
+    <string name="config_threshold_box">Detection threshold in encounters</string>
+    <string name="config_threshold_pokeball">Pokeball detection threshold</string>
+    <string name="config_threshold_clickable">Clickable detection threshold</string>
+    <string name="config_threshold_passenger">Passenger bypass threshold</string>
+    <string name="config_auto_correct_rewardscreen">Auto-correct after capture</string>
+    <string name="config_auto_correct_menusscreen">Auto-correct in menus</string>
+
+    <string name="config_desc_fast_catch">Uses fast-catch throw method. Faster but can miss.</string>
+    <string name="config_desc_throw_boost">Boosts throw power by a percentage. Helps hit distant Pokémon but lowers accuracy</string>
+    <string name="config_desc_fixed_pokeball">Uses coordinates based on the screen size. Faster but may lead to missed clicks. </string>
+    <string name="config_desc_save_coords">Finds the position once and saves it</string>
+    <string name="config_desc_cycle_interval">Minimum time between actions</string>
+    <string name="config_desc_wait_timeout">Wait time to avoid blocking</string>
+    <string name="config_desc_max_results">Maximum results to evaluate</string>
+    <string name="config_desc_boost_value">Percentage applied when enabled</string>
+    <string name="config_desc_threshold_classifier">Minimum confidence to classify</string>
+    <string name="config_desc_threshold_detector">Minimum confidence to detect on map</string>
+    <string name="config_desc_threshold_box">Minimum confidence to detect in encounters</string>
+    <string name="config_desc_threshold_pokeball">Minimum confidence to detect PokéBall</string>
+    <string name="config_desc_threshold_clickable">Minimum confidence to detect clickables</string>
+    <string name="config_desc_threshold_passenger">Minimum confidence to detect passenger screen</string>
+
+
+    <string name="preferences_key_priority_list" translatable="false">settings_priority_list</string>
+    <string name="preferences_key_fast_catch" translatable="false">settings_fast_catch</string>
+    <string name="preferences_key_fixed_pokeball" translatable="false">settings_fixed_pokeball</string>
+    <string name="preferences_key_throw_boost" translatable="false">settings_throw_boost</string>
+    <string name="preferences_key_save_coords" translatable="false">settings_save_coords</string>
+    <string name="preferences_key_threshold_classifier" translatable="false">settings_threshold_classifier</string>
+    <string name="preferences_key_threshold_detector" translatable="false">settings_threshold_detector</string>
+    <string name="preferences_key_threshold_box" translatable="false">settings_threshold_box</string>
+    <string name="preferences_key_threshold_pokeball" translatable="false">settings_threshold_pokeball</string>
+    <string name="preferences_key_threshold_clickable" translatable="false">settings_threshold_clickable</string>
+    <string name="preferences_key_threshold_passenger" translatable="false">settings_threshold_passenger</string>
+    <string name="preferences_key_cycle_interval" translatable="false">settings_cycle_interval</string>
+    <string name="preferences_key_wait_timeout" translatable="false">settings_wait_timeout</string>
+    <string name="preferences_key_max_results" translatable="false">settings_max_results</string>
+    <string name="preferences_key_boost_value" translatable="false">settings_boost_value</string>
+    <string name="preferences_key_auto_correct_rewardscreen" translatable="false">settings_auto_correct_rewardscreen</string>
+    <string name="preferences_key_auto_correct_menusscreen" translatable="false">settings_auto_correct_menusscreen</string>
+    <string name="preferences_key_pokeball_coords" translatable="false">settings_pokeball_coords</string>
+
+    <string name="preferences_key_theme" translatable="false">settings_theme</string>
+    <string name="preferences_key_language" translatable="false">settings_language</string>
+
+</resources>

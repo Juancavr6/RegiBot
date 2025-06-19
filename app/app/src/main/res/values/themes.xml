@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GOVision" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">@android:color/darker_gray</item>
+
+    </style>
+
+     <style name="Theme.GOVision" parent="Base.Theme.GOVision" />
+
+     <style name="ColorSwitch" parent="Theme.AppCompat.Light">
+          <item name="colorControlActivated">#276C5A</item>
+
+        <item name="colorSwitchThumbNormal">#E6E6E6</item>
+
+        <item name="android:colorForeground">#8F221F1F</item>
+    </style>
+
+    <style name="VectorTintStyle" parent="Theme.AppCompat.Light">
+        <item name="tint">#000000</item>
+    </style>
+</resources>

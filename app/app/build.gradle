@@ -1,0 +1,55 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.juancavr6.regibot'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.juancavr6.regibot"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        resConfigs "en", "es"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86' // can´t run in 'x86_64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    //MediaPipe dependency
+    implementation 'com.google.mediapipe:tasks-vision:latest.release'
+    //TensorFlow Lite dependency
+    implementation 'org.tensorflow:tensorflow-lite:+'
+
+    //GSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    //Lottie for animations
+    implementation 'com.airbnb.android:lottie:6.4.0'
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.preference
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

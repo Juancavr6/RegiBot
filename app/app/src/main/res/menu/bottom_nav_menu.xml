@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/displayText_home"
+        android:icon="@drawable/vector_home"
+        android:id="@+id/item_home"/>
+    <item android:title="@string/displayText_params"
+        android:icon="@drawable/vector_params"
+        android:id="@+id/item_params"/>
+    <item android:title="@string/displayText_more"
+        android:icon="@drawable/vector_more"
+        android:id="@+id/item_more"/>
+
+
+</menu>

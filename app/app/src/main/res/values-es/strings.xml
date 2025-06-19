@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="displayText_loading">Preparando</string>
+    <string name="displayText_ready">¡Todo listo! Pulsa play</string>
+    <string name="displayText_priority">Orden de prioridad</string>
+    <string name="displayText_settings">Opciones</string>
+    <string name="displayText_home">Inicio</string>
+    <string name="displayText_params">Parámetros</string>
+    <string name="displayText_more">Más</string>
+    <string name="displayText_theme">Tema</string>
+    <string name="displayText_permission">Permisos</string>
+    <string name="displayText_permission_desc">Comprueba el estado de los permisos</string>
+    <string name="displayText_language">Idioma</string>
+    <string name="displayText_version">Versiones</string>
+    <string name="displayText_about">Acerca de la app</string>
+    <string name="displayText_selector_language">Selecciona tu idioma</string>
+    <string name="displayText_version_desc">Comprueba las últimas versiones</string>
+    <string name="displayText_selector_theme">Selecciona un tema</string>
+    <string name="displayText_selector_dark">Oscuro</string>
+    <string name="displayText_selector_light">Claro</string>
+    <string name="displayText_overlap">Permitir mostrar sobre otras apps</string>
+    <string name="displayText_overlap_desc">Este permiso es necesario para mostrar elementos flotantes mientras usas otras aplicaciones.La ventana flotante solo se muestra cuando la función está activa y puedes desactivarla en cualquier momento.</string>
+    <string name="displayText_accesibility">Habilitar accesibilidad</string>
+    <string name="displayText_accesibility_desc">Esta función requiere permisos de accesibilidad para automatizar ciertas acciones de forma segura. El permiso solo se usa mientras la función está activa.</string>
+    <string name="displayText_enable">Activar</string>
+    <string name="displayText_later">Más tarde</string>
+    <string name="displayText_threshold">Umbrales</string>
+    <string name="displayText_enter">Introduce un valor</string>
+    <string name="displayText_invalid_input">Entrada no válida</string>
+    <string name="displayText_reset_general">Reestablecer parámetros generales</string>
+    <string name="displayText_reset_threshold">Reestablecer umbrales</string>
+    <string name="displayText_reset">Reestablecidos</string>
+    <string name="displayText_kofi">Apóyame en Ko-fi</string>
+
+
+
+    <string name="actionElement_pokestop">Girar Pokeparada</string>
+    <string name="actionElement_pokemon">Capturar Pokemon</string>
+    <string name="actionElement_rocket">Girar parada Rocket</string>
+    <string name="actionElement_node">Recolectar nodos</string>
+
+    <string name="config_fast_catch">Captura rápida </string>
+    <string name="config_throw_boost">Potenciar lanzamientos</string>
+    <string name="config_fixed_pokeball">Usar posición de Pokeball predefinida</string>
+    <string name="config_save_coords">Detectar y guardar posición</string>
+    <string name="config_cycle_interval">Intervalo entre ciclos (velocidad)</string>
+    <string name="config_wait_timeout">Tiempo de espera</string>
+    <string name="config_max_results">Resultados por inferencia</string>
+    <string name="config_boost_value">Potenciar lanzamientos (%)</string>
+    <string name="config_threshold_classifier">Umbral de clasificación</string>
+    <string name="config_threshold_detector">Umbral de detección </string>
+    <string name="config_threshold_box">Umbral de detección en encuentros</string>
+    <string name="config_threshold_pokeball">Umbral de detección de Pokeball </string>
+    <string name="config_threshold_clickable">Umbral de detección de clicks </string>
+    <string name="config_threshold_passenger">Umbral de bypass de pasajero</string>
+    <string name="config_auto_correct_rewardscreen">Corregir umbral tras captura </string>
+    <string name="config_auto_correct_menusscreen">Corregir umbral en menus </string>
+
+    <string name="config_desc_fast_catch">Usa el método de captura rápida. Más rápido, pero puede fallar.</string>
+    <string name="config_desc_fixed_pokeball">Usa coordenadas según el tamaño de pantalla. Más rápido, pero puede fallar.</string>
+    <string name="config_desc_throw_boost">Potencia los lanzamientos en porcentaje. Alcanza Pokémon lejanos, pero pierde precisión.</string>
+    <string name="config_desc_save_coords">Encuentra la posición una vez y la guarda</string>
+    <string name="config_desc_cycle_interval">Tiempo mínimo entre acciones</string>
+    <string name="config_desc_wait_timeout">Tiempo de espera para evitar bloqueos</string>
+    <string name="config_desc_max_results">Máximo de resultados a evaluar</string>
+    <string name="config_desc_boost_value">Porcentaje aplicable si está activado</string>
+    <string name="config_desc_threshold_classifier">Confianza mínima para clasificar</string>
+    <string name="config_desc_threshold_detector">Confianza mínima para detectar en mapa</string>
+    <string name="config_desc_threshold_box">Confianza mínima para detectar en encuentros</string>
+    <string name="config_desc_threshold_pokeball">Confianza mínima para detectar Pokéball</string>
+    <string name="config_desc_threshold_clickable">Confianza mínima para detectar clicks</string>
+    <string name="config_desc_threshold_passenger">Confianza mínima para pasajeros</string>
+
+</resources>

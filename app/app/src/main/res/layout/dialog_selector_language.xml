@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/displayText_selector_language"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/lang_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/lang_spanish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Español"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground" />
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_main"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="10dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageElement"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imageArrowDown"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/vector_placeholder"/>
+
+
+        <TextView
+            android:id="@+id/textElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imageElement"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Element"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+            <!--android:theme="@style/ColorSwitch"-->
+
+        <ImageView
+            android:id="@+id/imageArrowDown"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_toRightOf="@+id/imageArrowUp"
+            android:src="@drawable/vector_arrow_down"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/shape_rounded_purple"
+            android:foreground="?attr/selectableItemBackground"
+            />
+        <ImageView
+            android:id="@+id/imageArrowUp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_arrow_up"
+            android:padding="5dp"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/shape_rounded_purple"
+            android:foreground="?attr/selectableItemBackground"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

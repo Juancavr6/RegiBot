@@ -1,0 +1,130 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory android:title="General">
+
+        <EditTextPreference
+            android:key="@string/preferences_key_cycle_interval"
+            android:title="@string/config_cycle_interval"
+            android:summary="@string/config_desc_cycle_interval"
+            android:dialogTitle="@string/displayText_enter"
+            android:dialogMessage="Min: 100 ms \n Max: 2000 ms"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:defaultValue="500"
+             />
+
+        <EditTextPreference
+            android:key="@string/preferences_key_wait_timeout"
+            android:title="@string/config_wait_timeout"
+            android:summary="@string/config_desc_wait_timeout"
+            android:dialogTitle="@string/displayText_enter"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:defaultValue="10"
+            app:isPreferenceVisible="false"/>
+
+        <EditTextPreference
+            android:key="@string/preferences_key_max_results"
+            android:title="@string/config_max_results"
+            android:summary="@string/config_desc_max_results"
+            android:dialogTitle="@string/displayText_enter"
+            android:dialogMessage="Min: 1 \n Max: 20 "
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:defaultValue="5" />
+
+        <SeekBarPreference
+            android:key="@string/preferences_key_boost_value"
+            android:title="@string/config_boost_value"
+            android:summary="@string/config_desc_boost_value"
+            android:inputType="number"
+            android:defaultValue="10"
+            app:min="1"
+            android:max="50"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1"/>
+
+        <Preference
+            android:key="reset_general"
+            android:title="@string/displayText_reset_general"
+            android:defaultValue="false"
+            app:defaultValue="false"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/displayText_threshold">
+
+        <SeekBarPreference
+            android:key="@string/preferences_key_threshold_classifier"
+            android:title="@string/config_threshold_classifier"
+            android:summary="@string/config_desc_threshold_classifier"
+            android:inputType="number"
+            android:defaultValue="50"
+            app:min="1"
+            android:max="99"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1"/>
+        <SeekBarPreference
+            android:key="@string/preferences_key_threshold_detector"
+            android:title="@string/config_threshold_detector"
+            android:summary="@string/config_desc_threshold_detector"
+            android:inputType="number"
+            android:defaultValue="50"
+            app:min="1"
+            android:max="99"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1" />
+        <SeekBarPreference
+            android:key="@string/preferences_key_threshold_box"
+            android:title="@string/config_threshold_box"
+            android:summary="@string/config_desc_threshold_box"
+            android:inputType="number"
+            android:defaultValue="50"
+            app:min="1"
+            android:max="99"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1" />
+        <SeekBarPreference
+            android:key="@string/preferences_key_threshold_pokeball"
+            android:title="@string/config_threshold_pokeball"
+            android:summary="@string/config_desc_threshold_pokeball"
+            android:inputType="number"
+            android:defaultValue="50"
+            app:min="1"
+            android:max="99"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1" />
+        <SeekBarPreference
+            android:key="@string/preferences_key_threshold_clickable"
+            android:title="@string/config_threshold_clickable"
+            android:summary="@string/config_desc_threshold_clickable"
+            android:inputType="number"
+            android:defaultValue="50"
+            app:min="1"
+            android:max="99"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1" />
+
+        <SeekBarPreference
+            android:key="@string/preferences_key_threshold_passenger"
+            android:title="@string/config_threshold_passenger"
+            android:summary="@string/config_desc_threshold_passenger"
+            android:inputType="number"
+            android:defaultValue="50"
+            app:min="1"
+            android:max="99"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1" />
+        <Preference
+            android:key="reset_threshold"
+            android:title="@string/displayText_reset_threshold"
+            android:defaultValue="false"
+            app:defaultValue="false"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

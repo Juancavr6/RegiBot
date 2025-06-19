@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeColor="#000000"
+    app:strokeWidth="2dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="7dp"
+    app:cardBackgroundColor="#F1ECE5"
+    android:clickable="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/vector_kofi_symbol"
+            android:layout_gravity="center"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/displayText_kofi"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/black"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieEmoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/animation_lottie_happy"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
