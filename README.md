@@ -54,7 +54,7 @@ If the necessary permissions are granted (you can check this from the app under 
  Ideally, wait until you're on the **map screen**.
 
 - Keep in mind that the app may get stuck on screens that are not typically part of the capture/spin PokeStops flow.  
-**Examples of screens the app is (probably) not able to handle:**
+**Examples of screens the app is (probably) not able to handle properly:**
 ![Unhandled examples](docs/images/examples.jpg)
 
 
