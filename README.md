@@ -1,7 +1,7 @@
 ![logo](docs/images/logo2.png)
 
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
-[![API](https://img.shields.io/badge/API-30%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=30)
+[![API](https://img.shields.io/badge/API-30%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=30](https://developer.android.com/about/versions/11))
 [![Twitter](https://img.shields.io/badge/Twitter-@juancavr6-blue.svg?style=flat)](http://twitter.com/juancavr6)
 
 ## Introduction
