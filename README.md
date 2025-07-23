@@ -1,7 +1,7 @@
-![logo](docs/images/logo2.png)
+![logo](docs/images/logo02.png)
 
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
-[![API](https://img.shields.io/badge/API-30%2B-brightgreen.svg?style=flat)](https://developer.android.com/about/versions/11)
+[![API](https://img.shields.io/badge/API-30%2B-darkgreen.svg?style=flat)](https://developer.android.com/about/versions/11)
 [![Twitter](https://img.shields.io/badge/Twitter-@juancavr6-blue.svg?style=flat)](http://twitter.com/juancavr6)
 
 ## Introduction
@@ -11,6 +11,8 @@ RegiBot is a tool designed to simulate basic actions in Pokemon GO using compute
 
 
 - [Download APK](https://github.com/Juancavr6/RegiBot/releases)
+
+<img src="docs/images/demo.gif" alt="Demo gif" width="300">
 
 
 ---
