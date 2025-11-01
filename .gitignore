@@ -12,9 +12,6 @@ captures/
 .externalNativeBuild/
 
 app/app/release
-app/app/src/main/assets
-app/app/src/main/assets
-app/app/src/main/java/com/juancavr6/regibot/utils/Loader.java
 
 *.apk
 *.ap_
