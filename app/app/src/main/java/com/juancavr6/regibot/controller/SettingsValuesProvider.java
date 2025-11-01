@@ -356,40 +356,5 @@ public class SettingsValuesProvider {
         float y = Float.parseFloat(parts[1]);
         return new float[]{x, y};
     }
-    public static String getStringPrefix(int type) {
-        switch (type) {
-            case 0:
-                char c1 = (char) ('1' ^ 0);
-                char c2 = (char) (50 + 2);
-
-                char[] temp = new char[]{c2, c1};
-
-                for (int i = 0; i < temp.length / 2; i++) {
-                    char t = temp[i];
-                    temp[i] = temp[temp.length - i - 1];
-                    temp[temp.length - i - 1] = t;
-                }
-
-                return new String(temp);
-            case 1:
-                String p1 = new String(new byte[]{68, 71});
-                String p2 = new String(new byte[]{115});
-                String p3 = new String(new byte[]{57, 51});
-
-                String reversed = p1 + p2 + p3;
-                StringBuilder sb = new StringBuilder(reversed).reverse();
-
-
-                char[] mix = sb.toString().toCharArray();
-                char tempp = mix[2];
-                mix[2] = mix[3];
-                mix[3] = tempp;
-
-                return new String(mix);
-            default:
-                return "default_prefix";
-        }
-
-    }
 
 }

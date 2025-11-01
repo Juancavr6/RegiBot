@@ -18,7 +18,6 @@ import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetector;
 import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetectorResult;
 import com.juancavr6.regibot.R;
 import com.juancavr6.regibot.utils.CustomUtils;
-import com.juancavr6.regibot.utils.Loader;
 
 import org.tensorflow.lite.Interpreter;
 
@@ -170,13 +169,9 @@ public class ModelHandler {
     public static Detector buildDetector(Context context,String modelName,int maxResults){
 
         try {
-            // If you want to use a model from assets:
-            // comment the next line and use .setModelAssetPath(modelName) instead of .setModelAssetBuffer(modelBuffer)
-            ByteBuffer modelBuffer = Loader.toDirectByteBuffer(Loader.loadAsset(context, modelName, context.getString(R.string.preferences_key_pokeball_coords)));
-
             ObjectDetector.ObjectDetectorOptions options =
                     ObjectDetector.ObjectDetectorOptions.builder()
-                            .setBaseOptions(BaseOptions.builder().setModelAssetBuffer(modelBuffer).build())
+                            .setBaseOptions(BaseOptions.builder().setModelAssetPath(modelName).build())
                             .setRunningMode(RunningMode.IMAGE)
                             .setMaxResults(maxResults)
                             .build();
@@ -193,15 +188,10 @@ public class ModelHandler {
 
         try {
 
-            // If you want to use a model from assets:
-            // comment the next line and use .setModelAssetPath(modelName) instead of .setModelAssetBuffer(modelBuffer)
-            ByteBuffer modelBuffer = Loader.toDirectByteBuffer(Loader.loadAsset(context, modelName, context.getString(R.string.preferences_key_pokeball_coords)));
-
-
             ImageClassifier.ImageClassifierOptions options =
                     ImageClassifier.ImageClassifierOptions.builder()
                             .setBaseOptions(
-                                    BaseOptions.builder().setModelAssetBuffer(modelBuffer).build())
+                                    BaseOptions.builder().setModelAssetPath(modelName).build())
                             .setRunningMode(RunningMode.IMAGE)
                             .setMaxResults(maxResults)
                             .build();
