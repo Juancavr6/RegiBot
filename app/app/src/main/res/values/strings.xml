@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">RegiBot</string>
+    <string name="app_release_version" translatable="false">0.1.1</string>
 
     <string name="displayText_loading">Loading</string>
     <string name="displayText_ready">All set! Press play</string>
