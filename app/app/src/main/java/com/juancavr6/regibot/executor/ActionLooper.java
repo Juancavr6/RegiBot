@@ -31,7 +31,7 @@ public class ActionLooper implements Runnable {
     //Models instances
     private ModelHandler.Detector
             model_map,
-            model_enconter,
+            model_encounter,
             model_clickable;
     private ModelHandler.Classifier model_classifier;
     private ModelHandler.Predictor model_predictor;
@@ -114,13 +114,13 @@ public class ActionLooper implements Runnable {
 
     public void loadModels(){
         model_map = ModelHandler.buildDetector
-           (service, "dmmv2.enc",controller.getMaxResults());
-        model_enconter = ModelHandler.buildDetector
-           (service, "dem.enc",controller.getMaxResults());
+           (service, "model_detector_map_v2.tflite",controller.getMaxResults());
+        model_encounter = ModelHandler.buildDetector
+           (service, "model_detector_encounter.tflite",controller.getMaxResults());
         model_clickable = ModelHandler.buildDetector
-           (service, "dcmv2.enc",controller.getMaxResults());
+           (service, "model_detector_clickable_v2.tflite",controller.getMaxResults());
         model_classifier = ModelHandler.buildClassifier
-           (service, "cmv5.enc",controller.getMaxResults());
+           (service, "model_classifier_screen_v5.tflite",controller.getMaxResults());
         model_predictor = ModelHandler.buildPredictor
                 (service,"predictor.tflite");
     }
@@ -160,11 +160,11 @@ public class ActionLooper implements Runnable {
                 }},50);
             synchronized(lock){lock.wait(controller.getWaitTimeout());}
 
-            model_enconter.detect(lastScreenShot);
-            Log.d(TAG,"run(): Finding BoundingBox " + model_enconter.getDetectionList());
+            model_encounter.detect(lastScreenShot);
+            Log.d(TAG,"run(): Finding BoundingBox " + model_encounter.getDetectionList());
 
-            int boundingBoxIndex = controller.lookForMatchAtEncounter(model_enconter,"boundingBox");
-            int dynamicBoxIndex = controller.lookForMatchAtEncounter(model_enconter,"dynamicBox");
+            int boundingBoxIndex = controller.lookForMatchAtEncounter(model_encounter,"boundingBox");
+            int dynamicBoxIndex = controller.lookForMatchAtEncounter(model_encounter,"dynamicBox");
 
             // If both bounding box and dynamic box are found, proceed with the throw
             if(boundingBoxIndex > -1 && dynamicBoxIndex > -1){
@@ -417,14 +417,14 @@ public class ActionLooper implements Runnable {
             return getFixedCoords();
         }
         if (!controller.shouldSaveCoords() || !controller.isPokeballCoordsSet()) {
-            model_enconter.detect(lastScreenShot);
-            Log.d(TAG, "run(): Finding Pokeball: " + model_enconter.getDetectionList());
+            model_encounter.detect(lastScreenShot);
+            Log.d(TAG, "run(): Finding Pokeball: " + model_encounter.getDetectionList());
 
-            int pokeballIndex = controller.lookForMatchAtEncounter(model_enconter, "pokeball");
+            int pokeballIndex = controller.lookForMatchAtEncounter(model_encounter, "pokeball");
 
             if (pokeballIndex > -1) {
-                float centerX = model_enconter.getBoundingBox(pokeballIndex).centerX();
-                float centerY = model_enconter.getBoundingBox(pokeballIndex).centerY();
+                float centerX = model_encounter.getBoundingBox(pokeballIndex).centerX();
+                float centerY = model_encounter.getBoundingBox(pokeballIndex).centerY();
 
                 if (CustomUtils.isValidSectionForPokeball(centerX, centerY, service.displayWidth, service.displayHeight)) {
                     coords[0] = centerX;
@@ -452,7 +452,7 @@ public class ActionLooper implements Runnable {
         };
     }
     private void manageThrow(int boundingBoxIndex,float[] pokeballCoords) throws InterruptedException {
-        RectF boundingBox = model_enconter.getBoundingBox(boundingBoxIndex);
+        RectF boundingBox = model_encounter.getBoundingBox(boundingBoxIndex);
         float[] input = {boundingBox.centerX(),boundingBox.centerY(),
                 boundingBox.width(),boundingBox.height()};
         float[] normalizedInput = model_predictor.getNormalizedInput(

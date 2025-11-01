@@ -16,14 +16,12 @@ import com.google.mediapipe.tasks.vision.imageclassifier.ImageClassifier;
 import com.google.mediapipe.tasks.vision.imageclassifier.ImageClassifierResult;
 import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetector;
 import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetectorResult;
-import com.juancavr6.regibot.R;
 import com.juancavr6.regibot.utils.CustomUtils;
 
 import org.tensorflow.lite.Interpreter;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.List;
