@@ -10,8 +10,8 @@ android {
         applicationId "com.juancavr6.regibot"
         minSdk 30
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         resConfigs "en", "es"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -34,6 +34,7 @@ android {
 
 dependencies {
     //MediaPipe dependency
+    //new release
     implementation 'com.google.mediapipe:tasks-vision:latest.release'
     //TensorFlow Lite dependency
     implementation 'org.tensorflow:tensorflow-lite:+'
