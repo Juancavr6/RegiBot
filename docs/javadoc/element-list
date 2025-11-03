@@ -1,0 +1,10 @@
+com.juancavr6.regibot
+com.juancavr6.regibot.controller
+com.juancavr6.regibot.executor
+com.juancavr6.regibot.ml
+com.juancavr6.regibot.services
+com.juancavr6.regibot.ui
+com.juancavr6.regibot.ui.adapter
+com.juancavr6.regibot.ui.decorator
+com.juancavr6.regibot.ui.fragment
+com.juancavr6.regibot.utils
