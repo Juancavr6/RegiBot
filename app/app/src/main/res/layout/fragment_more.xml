@@ -241,6 +241,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"/>
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_crash"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:tag="crashlog"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@android:drawable/stat_sys_warning"
+                        app:tint="@color/gray"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/displayText_crashlog"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/card_about"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"

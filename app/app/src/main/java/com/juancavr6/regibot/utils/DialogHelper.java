@@ -2,7 +2,10 @@ package com.juancavr6.regibot.utils;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.LocaleManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -124,6 +127,27 @@ public class DialogHelper {
         });
 
         dialog.show();
+    }
+
+
+    public static void crashReport(Context context, String content){
+
+        new AlertDialog.Builder(context)
+                .setTitle(context.getString(R.string.displayText_crashlog))
+                .setMessage(content)
+                .setPositiveButton(context.getString(R.string.displayText_close), null)
+                .setNeutralButton(context.getString(R.string.displayText_copy), (dialog, which) -> {
+
+                    ClipboardManager clipboard =
+                            (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+
+                    ClipData clip =
+                            ClipData.newPlainText("crash_log", content);
+
+                    clipboard.setPrimaryClip(clip);
+
+                })
+                .show();
     }
 
 

@@ -1,5 +1,9 @@
 package com.juancavr6.regibot.ui.fragment;
 
+import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -8,17 +12,22 @@ import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.card.MaterialCardView;
 import com.juancavr6.regibot.R;
 import com.juancavr6.regibot.WebviewActivity;
+import com.juancavr6.regibot.utils.CrashLogger;
 import com.juancavr6.regibot.utils.DialogHelper;
 
+import java.io.File;
+import java.util.Objects;
 
 
 public class MoreFragment extends Fragment {
@@ -37,6 +46,7 @@ public class MoreFragment extends Fragment {
         CardView cardViewTheme = root.findViewById(R.id.card_theme);
         CardView cardViewPerms = root.findViewById(R.id.card_perms);
         CardView cardViewVersion = root.findViewById(R.id.card_version);
+        CardView cardViewCrash = root.findViewById(R.id.card_crash);
         CardView cardViewAbout = root.findViewById(R.id.card_about);
         MaterialCardView cardViewKofi = root.findViewById(R.id.imageKofi);
         ImageView imageViewGithub = root.findViewById(R.id.github_logo);
@@ -54,6 +64,19 @@ public class MoreFragment extends Fragment {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(cardViewVersion.getTag().toString()));
             startActivity(intent);
+        });
+        cardViewCrash.setOnClickListener(v -> {
+            File latest = CrashLogger.getLatestCrashFile(this.requireContext());
+
+            if (latest != null) {
+
+                String content = CrashLogger.readCrashFile(latest);
+                DialogHelper.crashReport(this.getContext(),content);
+            }
+            else {
+                Log.d("ViewCrash", "ViewCrash: "+ "Null" );
+                Toast.makeText(this.getContext(),"No crash report available",Toast.LENGTH_SHORT).show();
+            }
         });
         cardViewAbout.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), WebviewActivity.class);

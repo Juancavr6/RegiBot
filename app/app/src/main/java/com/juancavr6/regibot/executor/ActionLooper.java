@@ -8,6 +8,7 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.Log;
 import android.view.Display;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -15,7 +16,10 @@ import com.juancavr6.regibot.controller.SettingsController;
 import com.juancavr6.regibot.ml.ModelHandler;
 import com.juancavr6.regibot.services.ActionService;
 import com.juancavr6.regibot.services.FloatingMenuService;
+import com.juancavr6.regibot.utils.CrashLogger;
 import com.juancavr6.regibot.utils.CustomUtils;
+
+import java.io.IOException;
 
 public class ActionLooper implements Runnable {
 
@@ -113,16 +117,23 @@ public class ActionLooper implements Runnable {
 
 
     public void loadModels(){
+
+        CrashLogger.log("Called loadModels");
         model_map = ModelHandler.buildDetector
            (service, "model_detector_map_v2.tflite",controller.getMaxResults());
+        CrashLogger.log("Loaded model_map");
         model_encounter = ModelHandler.buildDetector
            (service, "model_detector_encounter.tflite",controller.getMaxResults());
+        CrashLogger.log("Loaded model_encounter");
         model_clickable = ModelHandler.buildDetector
            (service, "model_detector_clickable_v2.tflite",controller.getMaxResults());
+        CrashLogger.log("Loaded model_clickable");
         model_classifier = ModelHandler.buildClassifier
            (service, "model_classifier_screen_v5.tflite",controller.getMaxResults());
+        CrashLogger.log("Loaded model_classifier");
         model_predictor = ModelHandler.buildPredictor
                 (service,"predictor.tflite");
+        CrashLogger.log("Loaded model_predictor");
     }
     public void pause(){ this.isPaused=true; }
     public void resume(){ this.isPaused=false; }

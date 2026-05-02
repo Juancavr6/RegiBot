@@ -14,6 +14,7 @@
     <string name="displayText_permission_desc">Check the status of the permissions</string>
     <string name="displayText_language">Language</string>
     <string name="displayText_version">Versions</string>
+    <string name="displayText_crashlog">Error report</string>
     <string name="displayText_about">About this app</string>
     <string name="displayText_version_desc">Check the latest versions</string>
     <string name="displayText_selector_language">Select your language</string>
@@ -26,6 +27,8 @@
     <string name="displayText_accesibility_desc">This feature requires accessibility permission to safely automate certain actions.The permission is only used while the feature is active.</string>
     <string name="displayText_enable">Enable</string>
     <string name="displayText_later">Maybe later</string>
+    <string name="displayText_close">Close</string>
+    <string name="displayText_copy">Copy</string>
     <string name="displayText_threshold">Thresholds</string>
     <string name="displayText_enter">Enter a Value</string>
     <string name="displayText_invalid_input">Not a valid input</string>

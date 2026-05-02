@@ -16,6 +16,7 @@ import com.google.mediapipe.tasks.vision.imageclassifier.ImageClassifier;
 import com.google.mediapipe.tasks.vision.imageclassifier.ImageClassifierResult;
 import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetector;
 import com.google.mediapipe.tasks.vision.objectdetector.ObjectDetectorResult;
+import com.juancavr6.regibot.utils.CrashLogger;
 import com.juancavr6.regibot.utils.CustomUtils;
 
 import org.tensorflow.lite.Interpreter;
@@ -36,6 +37,8 @@ public class ModelHandler {
         public Predictor(String modelName, Context context){
             try {
                 modelInterpreter = new Interpreter(loadModelFile(modelName, context));
+                CrashLogger.log("Started Interpreter");
+
             }catch (Exception e){
                 Log.e("Interpreter",e.getStackTrace()[0].toString());
             }
@@ -173,6 +176,7 @@ public class ModelHandler {
                             .setRunningMode(RunningMode.IMAGE)
                             .setMaxResults(maxResults)
                             .build();
+            CrashLogger.log("Built Detector");
             return new Detector(ObjectDetector.createFromOptions(context, options));
         }
         catch (Exception e) {
@@ -193,6 +197,7 @@ public class ModelHandler {
                             .setRunningMode(RunningMode.IMAGE)
                             .setMaxResults(maxResults)
                             .build();
+            CrashLogger.log("Built Classifier");
             return new Classifier(ImageClassifier.createFromOptions(context, options));
         } catch (Exception e) {
             Log.e("TAG", "buildClassifier ERROR: "+ e.getMessage() );

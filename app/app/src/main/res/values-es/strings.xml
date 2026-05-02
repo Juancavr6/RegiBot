@@ -12,6 +12,7 @@
     <string name="displayText_permission_desc">Comprueba el estado de los permisos</string>
     <string name="displayText_language">Idioma</string>
     <string name="displayText_version">Versiones</string>
+    <string name="displayText_crashlog">Reporte de errores</string>
     <string name="displayText_about">Acerca de la app</string>
     <string name="displayText_selector_language">Selecciona tu idioma</string>
     <string name="displayText_version_desc">Comprueba las últimas versiones</string>
@@ -24,6 +25,8 @@
     <string name="displayText_accesibility_desc">Esta función requiere permisos de accesibilidad para automatizar ciertas acciones de forma segura. El permiso solo se usa mientras la función está activa.</string>
     <string name="displayText_enable">Activar</string>
     <string name="displayText_later">Más tarde</string>
+    <string name="displayText_close">Cerrar</string>
+    <string name="displayText_copy">Copiar</string>
     <string name="displayText_threshold">Umbrales</string>
     <string name="displayText_enter">Introduce un valor</string>
     <string name="displayText_invalid_input">Entrada no válida</string>
